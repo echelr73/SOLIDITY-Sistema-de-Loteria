@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"LOTERIA/SafeMath.sol": "SafeMath"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"LOTERIA/SafeMath.sol": {
+			"keccak256": "0x138fb5f17ab6a846e82624e040db1ba885a48b8f4782f19af2e29358620ad1d9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bcb863b1deb67c72ecbfde79f1e41cdefe39c2a83fe37b4c48e2a43256f48df7",
+				"dweb:/ipfs/QmbuEAjiZGcN4tvYmmQi3VenWTKz6WKDwV3QSUzhG63CHv"
+			]
+		}
+	},
+	"version": 1
+}
