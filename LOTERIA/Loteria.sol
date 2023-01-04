@@ -16,6 +16,9 @@ contract Loteria{
     //Numero de tokens a crear
     uint private tokens_creados = 10000;
 
+    //Evento de compra de tokens
+    event ComprandoTokens(uint,address);
+
     constructor() public {
         token = new ERC20Basic(tokens_creados);
         owner = msg.sender;
@@ -55,6 +58,8 @@ contract Loteria{
         require(_numTokens <= balance,"Compra un numero de Tokens adecuado.");
         //Transferencia de Tokens al comprador
         token.transfer(msg.sender, _numTokens);
+        //Emitir el evento de compra tokens
+        emit ComprandoTokens(_numTokens, msg.sender);
     }
 
     //Balance de tokens en el contrato de loteria

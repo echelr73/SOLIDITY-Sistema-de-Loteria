@@ -11,6 +11,25 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "ComprandoTokens",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -138,11 +157,11 @@
 			]
 		},
 		"LOTERIA/Loteria.sol": {
-			"keccak256": "0xebe09cf64552f45a40bda4314176a95a5f69bbc186ae1636e235b296765a2ffa",
+			"keccak256": "0x10e153849bb24b895e562587fc3bd81a67394e0c2555579ae8442ea7a38977d2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://553eb64d1960e4cd92296089ceea8c282fb96a0ea8cdb2ce89dcfabc388409dc",
-				"dweb:/ipfs/QmX5eGpLDWp5rQtkakEnQgusD4Q9DzcFBvF5NDbtssuRFv"
+				"bzz-raw://da148b9d3cfeffa7a90af17d7ae23380d7bf49d9232fe6af4a348c585139b0c0",
+				"dweb:/ipfs/Qmd76SkV7CtNQGNAyeoVgAwRwMPaVivdSPN4jLQgJKnTtb"
 			]
 		},
 		"LOTERIA/SafeMath.sol": {
