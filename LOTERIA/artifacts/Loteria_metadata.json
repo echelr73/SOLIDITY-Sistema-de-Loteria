@@ -11,6 +11,45 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_numTokens",
+						"type": "uint256"
+					}
+				],
+				"name": "ComprarTokens",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_numTokens",
+						"type": "uint256"
+					}
+				],
+				"name": "GenerarTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "TokensDisponibles",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "contrato",
 				"outputs": [
@@ -31,19 +70,6 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "tokens_creados",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -86,11 +112,11 @@
 			]
 		},
 		"LOTERIA/Loteria.sol": {
-			"keccak256": "0x767fd99ff15da60b336eedd783b9f5a1fb5fad7603fe4ea0da31a916a204f838",
+			"keccak256": "0x096bf6fb36e8160e4146397b43b469d9b2f8ade097f4d79330648572dc411327",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://924287f0726034c07afaf725832040fa804c26e4027b5c1a28b71780a2a53d6c",
-				"dweb:/ipfs/QmSJ78f5sXxhHFRGEGX7CKkhcjiCPYBAZJfrJGS45DD4Rk"
+				"bzz-raw://0680bec38e12769db533130880e96ee951166dce6a13baa306aa6242f8232a5e",
+				"dweb:/ipfs/QmbUE6oSFb3pkbdzki6xqRprHaaN1WAdCdvPGj1WvbYHm8"
 			]
 		},
 		"LOTERIA/SafeMath.sol": {
