@@ -4,7 +4,52 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "contrato",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokens_creados",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -41,11 +86,11 @@
 			]
 		},
 		"LOTERIA/Loteria.sol": {
-			"keccak256": "0x5687fa0bd2eee8bddbc82ec3b88088aa19810b1010ad5dfd7ffd78389b26220b",
+			"keccak256": "0x767fd99ff15da60b336eedd783b9f5a1fb5fad7603fe4ea0da31a916a204f838",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://050ba067c54aca6cb4b649de15bff87d650d39e70a574644d714181f30c8627e",
-				"dweb:/ipfs/QmUfzLhTRQScf6XE6ZXvxJ7yvRGEvP7fc9YrmF79XVbAKQ"
+				"bzz-raw://924287f0726034c07afaf725832040fa804c26e4027b5c1a28b71780a2a53d6c",
+				"dweb:/ipfs/QmSJ78f5sXxhHFRGEGX7CKkhcjiCPYBAZJfrJGS45DD4Rk"
 			]
 		},
 		"LOTERIA/SafeMath.sol": {
