@@ -38,6 +38,32 @@
 			},
 			{
 				"inputs": [],
+				"name": "Mistokens",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "Pozo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "TokensDisponibles",
 				"outputs": [
 					{
@@ -112,11 +138,11 @@
 			]
 		},
 		"LOTERIA/Loteria.sol": {
-			"keccak256": "0x096bf6fb36e8160e4146397b43b469d9b2f8ade097f4d79330648572dc411327",
+			"keccak256": "0xebe09cf64552f45a40bda4314176a95a5f69bbc186ae1636e235b296765a2ffa",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0680bec38e12769db533130880e96ee951166dce6a13baa306aa6242f8232a5e",
-				"dweb:/ipfs/QmbUE6oSFb3pkbdzki6xqRprHaaN1WAdCdvPGj1WvbYHm8"
+				"bzz-raw://553eb64d1960e4cd92296089ceea8c282fb96a0ea8cdb2ce89dcfabc388409dc",
+				"dweb:/ipfs/QmX5eGpLDWp5rQtkakEnQgusD4Q9DzcFBvF5NDbtssuRFv"
 			]
 		},
 		"LOTERIA/SafeMath.sol": {

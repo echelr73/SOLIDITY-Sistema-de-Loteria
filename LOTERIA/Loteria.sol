@@ -26,7 +26,7 @@ contract Loteria{
 
     //Funcion que estable el precio de los token en ether
     function PrecioToken(uint _numTokens) internal pure returns(uint){
-        return _numTokens*(0.1 ether);
+        return _numTokens*(0.001 ether);
     }
 
     //Funcion para generar mas Tokens para la loteria
@@ -61,5 +61,16 @@ contract Loteria{
     function TokensDisponibles() public view returns(uint){
         return token.balanceOf(contrato);
     }
+
+    //Obtener el balance de tokens acumulados en el pozo
+    function Pozo() public view returns(uint){
+        return token.balanceOf(owner);
+    }
+
+    //Balance de tokens de una persona
+    function Mistokens() public view returns(uint){
+        return token.balanceOf(msg.sender);
+    }
+
 
 }
