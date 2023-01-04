@@ -33,7 +33,7 @@ contract Loteria{
     }
 
     //Funcion para generar mas Tokens para la loteria
-    function GenerarTokens(uint _numTokens) public Unicamente(msg.sender){
+    function GenerarTokens(uint _numTokens) public Unicamente(owner){
         token.increaseTotalSupply(_numTokens);
     }
 
@@ -95,6 +95,8 @@ contract Loteria{
     event boleto_comprado(uint, address);
     // Evento del ganador
     event boleto_ganador(uint);
+    //Evento para devolver tokens
+    event tokens_devueltos(uint, address);
 
     //Funcion para comprar boletos de loteria
     function CompraBoleto(uint _boletos) public{
@@ -128,7 +130,40 @@ contract Loteria{
     //Funcion para visualizar los numneros d eboletos de una persona
     function TusBoletos() public view returns(uint [] memory){
         return idPersona_boletos[msg.sender];
+    }
 
+    //Funcion para generar un ganador y transferirle los tokens
+    function GenerarGanador() public Unicamente(msg.sender){
+        //Debe haber boletos comprados para generar un ganador
+        require(boletos_comprados.length > 0, "Todavia no se compro ningun boleto");
+        //Declaracion de la longitud del array
+        uint longitud = boletos_comprados.length;
+        //Aleatoriamente elijo un numero entre 0 - Longitud
+        uint posicion_array = uint (uint(keccak256(abi.encodePacked(block.timestamp))) % longitud);
+        //Seleccion del numero aleatorio mediante la posicion del array aleatoria
+        uint eleccion = boletos_comprados[posicion_array];
+        //Emitir el evento del ganador
+        emit boleto_ganador(eleccion);
+        //Recuperar la direccion del ganador
+        address direccion_ganador = ADN_boleto[eleccion];
+        // Enviarle los tokens del premio al ganador
+        token.transfer_loteria(msg.sender, direccion_ganador, Pozo());
+    }
+
+    //Devolucion de los tokens
+    function DevolverTokens(uint _numTokens) public payable{
+        //El numero de tokens a devolver debe ser mayor a 0
+        require(_numTokens > 0, "Necesitas devolver un numero positivo de tokens.");
+        //El usuario debe tener los tokens a devolver
+        require(_numTokens <= Mistokens(), "No tienes los tokens que deseas devolver.");
+        /*DEVOLUCION:
+         1.- El cliente devuelve tokens
+         2.- La loteria paga los tokens devueltos
+        */
+        token.transfer_loteria(msg.sender, address(this), _numTokens);
+        payable(msg.sender).transfer(PrecioToken(_numTokens));
+        //Emision del evento
+        emit tokens_devueltos(_numTokens, msg.sender);
     }
 
 }
