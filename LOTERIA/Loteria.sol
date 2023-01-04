@@ -77,5 +77,23 @@ contract Loteria{
         return token.balanceOf(msg.sender);
     }
 
+    // ------------------------------------- LOTERIA -------------------------
+    
+    //Precio del boleto de loteria
+    uint public PrecioBoleto = 5;
+    //Relacon entre la persona que compra boletos y los numeros de los boletos
+    mapping (address => uint[]) idPersona_boletos;
+    //Relacion necesario para identificar el ganador
+    mapping(uint => address) ABN_boleto;
+    //Numero aleatorio
+    uint randNonce = 0;
+    //Boletos generados
+    uint[] boletos_comprados;
+
+    //Eventos
+    //Evento cuando se compra un boleto
+    event boleto_comprado(uint);
+    // Evento del ganador
+    event boleto_ganador(uint);
 
 }

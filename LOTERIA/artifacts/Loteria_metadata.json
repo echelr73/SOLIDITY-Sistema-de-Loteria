@@ -30,6 +30,32 @@
 				"type": "event"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "boleto_comprado",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "boleto_ganador",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -71,6 +97,19 @@
 			{
 				"inputs": [],
 				"name": "Pozo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "PrecioBoleto",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -157,11 +196,11 @@
 			]
 		},
 		"LOTERIA/Loteria.sol": {
-			"keccak256": "0x10e153849bb24b895e562587fc3bd81a67394e0c2555579ae8442ea7a38977d2",
+			"keccak256": "0xae22885033e16078f96b14f1932d89106fc201b50f32deeb692b07de74b442f4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://da148b9d3cfeffa7a90af17d7ae23380d7bf49d9232fe6af4a348c585139b0c0",
-				"dweb:/ipfs/Qmd76SkV7CtNQGNAyeoVgAwRwMPaVivdSPN4jLQgJKnTtb"
+				"bzz-raw://1d5b0f27175924463fa0b7941970e49f19cb4db805b19749ba339e87e17599cd",
+				"dweb:/ipfs/QmdwNKhskkTkLnHHpLKhyPGcHvqxRtzqjH3kRzrXnGtdP7"
 			]
 		},
 		"LOTERIA/SafeMath.sol": {
