@@ -59,6 +59,19 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "_boletos",
+						"type": "uint256"
+					}
+				],
+				"name": "CompraBoleto",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "_numTokens",
 						"type": "uint256"
 					}
@@ -196,11 +209,11 @@
 			]
 		},
 		"LOTERIA/Loteria.sol": {
-			"keccak256": "0xae22885033e16078f96b14f1932d89106fc201b50f32deeb692b07de74b442f4",
+			"keccak256": "0xe0dcb6d6b77801c6886f725e61767ea7ac5a120ed0805d8742efa941f8324c05",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1d5b0f27175924463fa0b7941970e49f19cb4db805b19749ba339e87e17599cd",
-				"dweb:/ipfs/QmdwNKhskkTkLnHHpLKhyPGcHvqxRtzqjH3kRzrXnGtdP7"
+				"bzz-raw://2de7f85b101fc1329dccb74b8509a3d44b6b924096277ced9ff79def5c6b7a37",
+				"dweb:/ipfs/QmP5hsanudRvmVt3C5im6VBsRRVXqFAizcmJKbCsnLeqt7"
 			]
 		},
 		"LOTERIA/SafeMath.sol": {

@@ -81,10 +81,10 @@ contract Loteria{
     
     //Precio del boleto de loteria
     uint public PrecioBoleto = 5;
-    //Relacon entre la persona que compra boletos y los numeros de los boletos
+    //Relacion entre la persona que compra boletos y los numeros de los boletos
     mapping (address => uint[]) idPersona_boletos;
     //Relacion necesario para identificar el ganador
-    mapping(uint => address) ABN_boleto;
+    mapping(uint => address) ADN_boleto;
     //Numero aleatorio
     uint randNonce = 0;
     //Boletos generados
@@ -92,8 +92,37 @@ contract Loteria{
 
     //Eventos
     //Evento cuando se compra un boleto
-    event boleto_comprado(uint);
+    event boleto_comprado(uint, address);
     // Evento del ganador
     event boleto_ganador(uint);
+
+    //Funcion para comprar boletos de loteria
+    function CompraBoleto(uint _boletos) public{
+        //Precio total de los boletos a comprar
+        uint precio_total = _boletos * PrecioBoleto;
+        //Filtrado de los tokens a pagar
+        require(precio_total <= Mistokens(), "Necesitas comprar mas tokens.");
+        //Transferencia de tokens al owner
+        /* El cliente paga la atraccion en Tokens:
+        -Ha sido necesario crear una funcion en ERC20.sol con el nombre: "transfer_loteria"
+        debido a que en caso de usar la Transfer o TransferFrom las direcciones que se usaban 
+        para realizar la transaccion eran erroneas. Ya que el msg.sender que recibia el metodo
+        era la direccion del propio contrato
+        */
+        token.transfer_loteria(msg.sender, owner, precio_total);
+
+        for(uint i = 0; i < _boletos; i++){
+            uint random = uint(keccak256(abi.encodePacked(block.timestamp, msg.sender, randNonce))) % 10000;
+            randNonce++;
+            //Almacenamos los datos de los boletos
+            idPersona_boletos[msg.sender].push(random);
+            //Numero de boleto comprado
+            boletos_comprados.push(random);
+            //Asignacion del ADN del boleto para tener un ganador (ESTO ESTA BIEN?)
+            ADN_boleto[random] = msg.sender;
+            //Emision del evento
+            emit boleto_comprado(random, msg.sender);
+        }
+    }
 
 }
