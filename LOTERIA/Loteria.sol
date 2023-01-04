@@ -125,4 +125,10 @@ contract Loteria{
         }
     }
 
+    //Funcion para visualizar los numneros d eboletos de una persona
+    function TusBoletos() public view returns(uint [] memory){
+        return idPersona_boletos[msg.sender];
+
+    }
+
 }
